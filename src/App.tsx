@@ -1,8 +1,24 @@
+import MainHome from "./1_MainHome page/MainHome";
+
 function App() {
   return (
     <div className="App">
       <title>Ksy's Portfolio Website</title>
-      <h1 className="text-3xl font-bold underline">포트폴리오 프로젝트</h1>
+
+      {/* 큰 틀 */}
+
+      {/* 작은 틀 */}
+
+      {/* 레이아웃 등록 */}
+
+      {/* MainHome 페이지 등록 - 루트페이지 */}
+      <MainHome/>
+      {/* About Me 페이지 등록 */}
+
+      {/* Project 페이지 등록 */}
+
+      {/* 기타 페이지 등록 */}
+
     </div>
   );
 }
