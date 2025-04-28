@@ -13,9 +13,9 @@ const MainHome = () => {
       </div>
 
       {/* Contents */}
-      <div className="flex-col mt-[70px] min-h-screen p-4 bg-white-300">
+      <div className="flex-col mt-[70px] min-h-screen p-4 bg-gray-500">
         {/* Thumnail - sample : 소개글 */}
-        <div className="w-[500px] shadow-md bg-opacity-70 bg-gray-200 p-4">
+        <div className="w-[500px] bg-opacity-80 bg-gray-100 p-4 shadow-[0px_10px_20px_rgba(0,0,0,0.5)]">
           <span className="text-xl font-bold">포트폴리오 프로젝트</span>
           <p className="mt-2 text-gray-500 text-sm">
             이 페이지에 방문해주셔서 감사합니다. <br /> 이 곳은 제가
