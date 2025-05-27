@@ -1,4 +1,9 @@
 import { useState } from "react";
+import { SunIcon } from "@heroicons/react/24/solid";
+import { MoonIcon } from "@heroicons/react/24/solid";
+
+// 임시 로고
+import { AcademicCapIcon } from "@heroicons/react/24/solid";
 
 const MainHome = () => {
   const [themeMode, setThemeMode] = useState("light");
@@ -11,14 +16,24 @@ const MainHome = () => {
     /* Main Home page */
     <div>
       {/* Nav Bar */}
-      <div className="flex justify-between items-center top-0 w-full h-[70px] px-12 bg-gray-100 shadow-md backdrop-blur-sm fixed z-50">
-        <p className="text-2xl font-bold">LOGO</p>
-        <div className="flex space-x-8 text-l font-bold">
-          <p>Home</p>
+      <div className="flex justify-between items-center top-0 w-full h-[70px] px-8 shadow-md backdrop-blur-sm fixed z-50 bg-white bg-opacity-90">
+        {/* LOGO */}
+        <p
+          className="text-2xl font-bold cursor-pointer"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <AcademicCapIcon className="h-8 w-8 text-black" />
+        </p>
+        {/* Nav - contents */}
+        <div className="flex space-x-8 text-l font-normal">
+          <p>Intro</p>
+          <p>핵심역량</p>
+          <p>보유기술</p>
+          <p>프로젝트</p>
+          <p>Link</p>
+          <p>Information</p>
           <p>About Me</p>
-          <p>Project</p>
         </div>
-
         {/* Theme Mode Change Button */}
         <div className="flex items-center">
           <label className="relative inline-flex items-center cursor-pointer w-16 h-7">
@@ -30,38 +45,58 @@ const MainHome = () => {
             />
             {/* Theme Switch Bar */}
 
-            {/* <div className="w-full h-full rounded-full flex items-center justify-center text-xs font-bold bg-gray-300 peer-checked:bg-blue-600 transition-colors duration-300">
-              {themeMode === "light" ? "Light" : "Dark"}
+            {/* Toggle_One */}
+            {/* <div className="w-10 h-full rounded-full flex items-center justify-center text-xs font-bold bg-blue-600 peer-checked:bg-gray-500 transition-colors duration-500">
+              {themeMode === "light" ? (
+                <SunIcon
+                  className={
+                    themeMode === "light"
+                      ? "h-5 w-5 m-0.5 text-white"
+                      : "h-4 w-5 m-0.5 text-black"
+                  }
+                />
+              ) : (
+                <MoonIcon
+                  className={
+                    themeMode === "light"
+                      ? "h-4 w-5 m-0.5 text-black"
+                      : "h-5 w-5 m-0.5 text-white"
+                  }
+                />
+              )}
             </div> */}
 
             {/* Toggle_Both - light | dark */}
-            <div className="w-full h-full bg-gray-300 peer-checked:bg-blue-600 rounded-full flex items-center justify-center text-xs font-semibold transition-colors duration-300">
-              <span
+            <div
+              className="w-full h-full bg-blue-600 peer-checked:bg-gray-500 rounded-full 
+              flex items-center justify-center text-xs font-semibold transition-colors duration-500"
+            >
+              <SunIcon
                 className={
-                  themeMode === "light" ? "text-black" : "text-gray-400"
+                  themeMode === "light"
+                    ? "h-5 w-5 m-0.5 text-white"
+                    : "h-4 w-5 m-0.5 text-gray-700"
                 }
-              >
-                Light
-              </span>
-              <span className="mx-1">|</span>
-              <span
+              />
+              <MoonIcon
                 className={
-                  themeMode === "dark" ? "text-white" : "text-gray-400"
+                  themeMode === "light"
+                    ? "h-4 w-5 m-0.5 text-blue-800"
+                    : "h-4 w-5 m-0.5 text-white"
                 }
-              >
-                Dark
-              </span>
+              />
             </div>
 
             {/* Toggle Action */}
-            <div className="absolute left-1 w-5 h-5 rounded-full bg-white peer-checked:translate-x-9 transform transition-transform duration-300"></div>
+            {/* 토글 버튼 만들고 싶으면 bg-color-white 또는 border 하면 됨됨 */}
+            <div className="absolute left-2.5 w-5 h-5 rounded-full peer-checked:translate-x-6 transform transition-transform duration-500" />
           </label>
         </div>
       </div>
 
-      {/* Contents */}
-      <div className="flex-col mt-[70px] min-h-screen p-4 bg-gray-500">
-        {/* Thumnail - sample : 소개글 */}
+      {/* Page - Contents */}
+      {/* <div className="flex-col mt-[70px] min-h-screen p-4 bg-gray-300">
+        Thumnail - sample : 소개글
         <div className="w-[500px] bg-opacity-80 bg-gray-100 p-4 shadow-[0px_10px_20px_rgba(0,0,0,0.5)]">
           <span className="text-xl font-bold">포트폴리오 프로젝트</span>
           <p className="mt-2 text-gray-500 text-sm">
@@ -73,10 +108,42 @@ const MainHome = () => {
             e-mail : todus1225@gmail.com
           </p>
         </div>
+      </div> */}
+
+      {/* Page - Container */}
+      <div className="flex flex-col mt-[70px] h-full bg-gray-100 gap-y-[70px]">
+        {/* 1 page */}
+        <div className="flex flex-col justify-center h-[calc(100vh-70px)] content-center text-center gap-y-2">
+          <h1 className="text-7xl font-bold leading-tight tracking-[-0.1em]">
+            안녕하세요,
+            <br />
+            프론트엔드 개발자
+            <br />
+            권새연입니다.
+          </h1>
+          <h3 className="text-2xl text-gray-500">
+            회사와 함께 성장하고 협력하는
+            <br />
+            개발자가 되고 싶습니다.
+          </h3>
+        </div>
+        {/* 2 page*/}
+        <div className="bg-blue-300 h-screen content-center">
+          <div className="flex-col p-3 bg-gray-300">
+            <div className="bg-gray-400 w-fit">Image</div>
+            <h1>Title</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. In quis
+              hic voluptatum. Possimus recusandae asperiores, iure, dolores
+              neque sint voluptatibus accusamus, illo ipsam dicta cupiditate
+              optio dolorum eos libero veniam.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Footer */}
-      <div className="flex-col items-center w-full px-12 py-4 bg-gray-300 text-gray-500 text-sm">
+      <div className="flex-col items-center w-full px-12 py-4 bg-gray-400 text-gray-500 text-sm">
         <p>footer</p>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore
