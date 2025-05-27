@@ -1,4 +1,12 @@
+import { useState } from "react";
+
 const MainHome = () => {
+  const [themeMode, setThemeMode] = useState("light");
+
+  const handleThemeChange = () => {
+    setThemeMode((prev) => (prev === "light" ? "dark" : "light"));
+  };
+
   return (
     /* Main Home page */
     <div>
@@ -9,6 +17,45 @@ const MainHome = () => {
           <p>Home</p>
           <p>About Me</p>
           <p>Project</p>
+        </div>
+
+        {/* Theme Mode Change Button */}
+        <div className="flex items-center">
+          <label className="relative inline-flex items-center cursor-pointer w-16 h-7">
+            <input
+              type="checkbox"
+              checked={themeMode === "dark"}
+              onChange={handleThemeChange}
+              className="sr-only peer"
+            />
+            {/* Theme Switch Bar */}
+
+            {/* <div className="w-full h-full rounded-full flex items-center justify-center text-xs font-bold bg-gray-300 peer-checked:bg-blue-600 transition-colors duration-300">
+              {themeMode === "light" ? "Light" : "Dark"}
+            </div> */}
+
+            {/* Toggle_Both - light | dark */}
+            <div className="w-full h-full bg-gray-300 peer-checked:bg-blue-600 rounded-full flex items-center justify-center text-xs font-semibold transition-colors duration-300">
+              <span
+                className={
+                  themeMode === "light" ? "text-black" : "text-gray-400"
+                }
+              >
+                Light
+              </span>
+              <span className="mx-1">|</span>
+              <span
+                className={
+                  themeMode === "dark" ? "text-white" : "text-gray-400"
+                }
+              >
+                Dark
+              </span>
+            </div>
+
+            {/* Toggle Action */}
+            <div className="absolute left-1 w-5 h-5 rounded-full bg-white peer-checked:translate-x-9 transform transition-transform duration-300"></div>
+          </label>
         </div>
       </div>
 
