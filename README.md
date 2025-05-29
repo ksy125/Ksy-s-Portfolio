@@ -48,7 +48,18 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 
 # Ksy's Portfolio
-<!-- 기본 간격 : 4의 배수 -->
+<!-- 기본 개체 간격 : 4의 배수 -->
+<!-- 페이지별 간격 : 70px -->
+<!-- 페이지별 높이 : 100vh - 70px -->
+
+<!-- 적용된 크기 -->
+<!-- 로고 : 2xl -->
+<!-- nav 메뉴 : large / 개체 간격 : 8 -->
+<!-- 테마 버튼 : 4, 5px / marging : 0.5 -->
+<!-- 페이지 1. : 7xl / 소제목 : 2xl -->
+<!-- 테두리 곡률률 : lg -->
+
+<!-- 남은 할 일 : nav 연동, 테마변경, AboutMe 웹디자인/구성, 모바일 등 반응형 설계 등 -->
 
 <!-- git 로컬 연동 방법 -->
 <!-- https://velog.io/@falling_star3/GitHub-git-add-commit-push-status-%EB%A1%9C%EC%BB%AC%EC%97%90%EC%84%9C-%EC%9B%90%EA%B2%A9%EC%A0%80%EC%9E%A5%EC%86%8C%EB%A1%9C-%ED%8C%8C%EC%9D%BC-%EC%97%85%EB%A1%9C%EB%93%9C%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95 -->
